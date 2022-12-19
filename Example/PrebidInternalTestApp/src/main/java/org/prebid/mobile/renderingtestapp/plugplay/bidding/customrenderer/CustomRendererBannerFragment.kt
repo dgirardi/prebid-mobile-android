@@ -25,10 +25,10 @@ import org.prebid.mobile.api.rendering.listeners.BannerViewListener
 import org.prebid.mobile.api.rendering.BannerView
 import org.prebid.mobile.api.exceptions.AdException
 import org.prebid.mobile.api.rendering.customrenderer.CustomRendererStore
+import org.prebid.mobile.renderingtestsdk.TotoCustomRenderer
 import org.prebid.mobile.renderingtestapp.AdFragment
 import org.prebid.mobile.renderingtestapp.R
 import org.prebid.mobile.renderingtestapp.plugplay.config.AdConfiguratorDialogFragment
-import org.prebid.mobile.renderingtestapp.utils.ThirdPartyRenderer
 
 open class CustomRendererBannerFragment : AdFragment(),
     BannerViewListener {
@@ -39,8 +39,10 @@ open class CustomRendererBannerFragment : AdFragment(),
     protected var bannerView: BannerView? = null
 
     init {
-        val thirdPartyRenderer = ThirdPartyRenderer()
-        CustomRendererStore.getInstance().customBannerRenderers["toto"] = thirdPartyRenderer
+//        val thirdPartyRenderer = ThirdPartyRenderer()
+//        CustomRendererStore.getInstance().customBannerRenderers["toto"] = thirdPartyRenderer
+        val totoRenderer = TotoCustomRenderer()
+        CustomRendererStore.getInstance().customBannerRenderers["toto"] = totoRenderer
     }
 
     override fun initUi(view: View, savedInstanceState: Bundle?) {

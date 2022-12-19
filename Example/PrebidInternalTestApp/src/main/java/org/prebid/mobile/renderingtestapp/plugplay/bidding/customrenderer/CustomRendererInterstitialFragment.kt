@@ -20,15 +20,17 @@ import org.prebid.mobile.AdSize
 import org.prebid.mobile.api.data.AdUnitFormat
 import org.prebid.mobile.api.rendering.InterstitialAdUnit
 import org.prebid.mobile.api.rendering.customrenderer.CustomRendererStore
+import org.prebid.mobile.renderingtestsdk.TotoCustomRenderer
 import org.prebid.mobile.renderingtestapp.plugplay.bidding.base.BaseBidInterstitialFragment
-import org.prebid.mobile.renderingtestapp.utils.ThirdPartyRenderer
 import java.util.*
 
 open class CustomRendererInterstitialFragment : BaseBidInterstitialFragment() {
 
     init {
-        val thirdPartyRenderer = ThirdPartyRenderer()
-        CustomRendererStore.getInstance().customInterstitialRenderers["toto"] = thirdPartyRenderer
+//        val thirdPartyRenderer = ThirdPartyRenderer()
+//        CustomRendererStore.getInstance().customInterstitialRenderers["toto"] = thirdPartyRenderer
+        val totoRenderer = TotoCustomRenderer()
+        CustomRendererStore.getInstance().customInterstitialRenderers["toto"] = totoRenderer
     }
 
     override fun initInterstitialAd(adUnitFormat: AdUnitFormat, adUnitId: String?,

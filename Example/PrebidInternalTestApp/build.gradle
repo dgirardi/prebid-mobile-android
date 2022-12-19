@@ -90,6 +90,7 @@ dependencies {
     implementation project(':PrebidMobile-gamEventHandlers')
     implementation project(':PrebidMobile-admobAdapters')
     implementation project(':PrebidMobile-maxAdapters')
+    implementation project(':PrebidInternalCustomRenderer') // TODO should not be merged
 
     // For testing staging releases
 //    implementation "org.prebid:prebid-mobile-sdk:$prebidVersionName"

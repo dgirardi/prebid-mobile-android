@@ -14,14 +14,20 @@
  *    limitations under the License.
  */
 
-package org.prebid.mobile.api.rendering.customrenderer;
+package org.prebid.mobile.customrenderer
 
-import androidx.annotation.Nullable;
+import org.junit.Test
 
-public interface BaseCustomRenderer {
+import org.junit.Assert.*
 
-    String getName();
-    String getVersion();
-    @Nullable String getToken();
+/**
+ * Example local unit test, which will execute on the development machine (host).
+ *
+ * See [testing documentation](http://d.android.com/tools/testing).
+ */
+class ExampleUnitTest {
+    @Test
+    fun addition_isCorrect() {
+        assertEquals(4, 2 + 2)
+    }
 }
-
